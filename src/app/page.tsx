@@ -15,7 +15,8 @@ export default async function Home() {
 
 
 
-  let purchaseBookIds:string[];
+  let purchaseBookIds: string[] = [];
+
 
 
   if(user){
