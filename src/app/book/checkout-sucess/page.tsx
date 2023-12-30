@@ -14,38 +14,38 @@ const PurchaseSuccess = () => {
     const sessionId = searchParams.get("session_id");
 
     console.log(sessionId);
-// eslint-disable-next-line
-    // useEffect(()=>{
-    //     const fetchData = async() =>{
-    //         if(sessionId){
-    //             try{
-    //               console.log("さしすせそ");
-    //               console.log(sessionId);
-    //               console.log("たちつてと");
 
-    //                 const res = await fetch(
-    //                   `${process.env.NEXT_PUBLIC_API_URL}/checkout/success`,
-    //                         {
-    //                           method:"POST",
-    //                           headers:{"Content-Type": "application/json"}, 
-    //                           body:JSON.stringify({sessionId})
-    //                         }
-    //                       );
+    useEffect(()=>{
+        const fetchData = async() =>{
+            if(sessionId){
+                try{
+                  console.log("さしすせそ");
+                  console.log(sessionId);
+                  console.log("たちつてと");
 
-    //                 // console.log(await res.json());
-    //                 const data = await res.json();
+                    const res = await fetch(
+                      `${process.env.NEXT_PUBLIC_API_URL}/checkout/success`,
+                            {
+                              method:"POST",
+                              headers:{"Content-Type": "application/json"}, 
+                              body:JSON.stringify({sessionId})
+                            }
+                          );
 
-    //                 setBookUrl(data.purchase.bookId);
+                    // console.log(await res.json());
+                    const data = await res.json();
+
+                    setBookUrl(data.purchase.bookId);
     
-    //             }catch(err){
-    //                 console.error(err);
-    //             }
-    //         }
-    //     };
+                }catch(err){
+                    console.error(err);
+                }
+            }
+        };
 
-    //     fetchData();
-
-    // },[sessionId]);
+        fetchData();
+// eslint-disable-next-line react-hooks/exhaustive-deps
+    },[]);
 
   return (
     <div className="flex items-center justify-center mt-20">
