@@ -15,37 +15,37 @@ const PurchaseSuccess = () => {
 
     console.log(sessionId);
 // eslint-disable-next-line react-hooks/exhaustive-deps
-    useEffect(()=>{
-        const fetchData = async() =>{
-            if(sessionId){
-                try{
-                  console.log("さしすせそ");
-                  console.log(sessionId);
-                  console.log("たちつてと");
+    // useEffect(()=>{
+    //     const fetchData = async() =>{
+    //         if(sessionId){
+    //             try{
+    //               console.log("さしすせそ");
+    //               console.log(sessionId);
+    //               console.log("たちつてと");
 
-                    const res = await fetch(
-                      `${process.env.NEXT_PUBLIC_API_URL}/checkout/success`,
-                            {
-                              method:"POST",
-                              headers:{"Content-Type": "application/json"}, 
-                              body:JSON.stringify({sessionId})
-                            }
-                          );
+    //                 const res = await fetch(
+    //                   `${process.env.NEXT_PUBLIC_API_URL}/checkout/success`,
+    //                         {
+    //                           method:"POST",
+    //                           headers:{"Content-Type": "application/json"}, 
+    //                           body:JSON.stringify({sessionId})
+    //                         }
+    //                       );
 
-                    // console.log(await res.json());
-                    const data = await res.json();
+    //                 // console.log(await res.json());
+    //                 const data = await res.json();
 
-                    setBookUrl(data.purchase.bookId);
+    //                 setBookUrl(data.purchase.bookId);
     
-                }catch(err){
-                    console.error(err);
-                }
-            }
-        };
+    //             }catch(err){
+    //                 console.error(err);
+    //             }
+    //         }
+    //     };
 
-        fetchData();
+    //     fetchData();
 
-    },[]);
+    // },[]);
 
   return (
     <div className="flex items-center justify-center mt-20">
