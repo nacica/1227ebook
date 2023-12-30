@@ -44,7 +44,7 @@ const PurchaseSuccess = () => {
         };
 
         fetchData();
-// eslint-disable-next-line
+
     },[]);
 
   return (
