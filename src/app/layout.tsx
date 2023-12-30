@@ -26,7 +26,6 @@ export default function RootLayout({
         <NextAuthProvider>
            <Header/>
            <Suspense fallback={<Loading/>}>{children}</Suspense>
-           {children}
         </NextAuthProvider>
 
 
