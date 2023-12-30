@@ -14,7 +14,7 @@ const PurchaseSuccess = () => {
     const sessionId = searchParams.get("session_id");
 
     console.log(sessionId);
-
+// eslint-disable-next-line react-hooks/exhaustive-deps
     useEffect(()=>{
         const fetchData = async() =>{
             if(sessionId){
