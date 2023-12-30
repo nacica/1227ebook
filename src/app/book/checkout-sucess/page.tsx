@@ -44,8 +44,8 @@ const PurchaseSuccess = () => {
         };
 
         fetchData();
-// eslint-disable-next-line react-hooks/exhaustive-deps
-    },[]);
+
+    },[sessionId]);
 
   return (
     <div className="flex items-center justify-center mt-20">
