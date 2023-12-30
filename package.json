@@ -17,7 +17,8 @@
     "react": "^18",
     "react-dom": "^18",
     "react-spinners": "^0.13.8",
-    "stripe": "^14.10.0"
+    "stripe": "^14.10.0",
+    "react-hooks-exhaustive-deps": "^off"
   },
   "devDependencies": {
     "@types/node": "^20",
